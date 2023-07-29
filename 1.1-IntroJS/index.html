@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hands On 1-1 : Basic Form Validation</title>
+</head>
+<body>
+  <form onsubmit="return validateForm()">
+    <h1>Hands On 1: Basic Validation</h1>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm() {
+      const emailInput = document.getElementById('email');
+      const passwordInput = document.getElementById('password');
+      const email = emailInput.value;
+      const password = passwordInput.value;
+
+      // Validation rule 1: email must be in email format
+      // Using regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return false;
+      }
+
+      // Validation rule 2: password cannot be less than 6 characters
+      if (password.length < 6) {
+        alert('Password must be at least 6 characters long.');
+        return false;
+      }
+
+      // Validation rule 3: Both fields cannot be empty
+      if (email.trim() === '' || password.trim() === '') {
+        alert('Email and password cannot be empty.');
+        return false;
+      }
+
+      // Additional validation (Optional):
+      // Add any additional validation rules here if needed.
+
+      // If all validation passed, the form can be submitted
+      return true;
+    }
+  </script>
+</body>
+</html>
