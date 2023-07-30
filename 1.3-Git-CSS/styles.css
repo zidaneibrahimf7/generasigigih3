@@ -1,0 +1,132 @@
+/* CSS Reset to remove default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: black; */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1DB954;
+  color: #fff;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+main {
+  padding: 2rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: #1DB954;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.add-song {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.song-thumbnail {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  margin-right: 1rem;
+}
+
+.song-details {
+  flex: 1;
+}
+
+.song-details h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.song-details p {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background-color: #1DB954;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* Most played song */
+
+.most-played-songs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 10px;
+
+}
+
+.most-played-song {
+  flex: 0 0;
+  margin: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.most-played-song .song-thumbnail {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.most-played-song h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.most-played-song p {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
